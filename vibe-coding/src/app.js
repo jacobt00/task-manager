@@ -2,30 +2,32 @@ require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const helmet = require('helmet');
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
 const { engine } = require('express-handlebars');
 const connectDatabase = require('./config/database');
-const indexRoutes = require('./routes');
-
+const { loadUser, verifyCsrf } = require('./middleware/auth');
 const app = express();
 app.disable('x-powered-by');
-app.use(helmet({ contentSecurityPolicy: false })); // Configure a strict CSP before production.
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-app.use(express.static(path.join(__dirname, '..', 'public')));
+if (process.env.TRUST_PROXY === '1') app.set('trust proxy', 1);
+app.use(helmet());
+app.use(express.urlencoded({ extended: false, limit: '16kb' }));
+app.use(express.json({ limit: '16kb' }));
+if (!process.env.SESSION_SECRET || process.env.SESSION_SECRET.length < 32) throw new Error('Set SESSION_SECRET to a random value of at least 32 characters.');
+if (!process.env.MONGODB_URI) throw new Error('Set MONGODB_URI.');
+app.use(session({ name: 'taskflow.sid', secret: process.env.SESSION_SECRET, resave: false, saveUninitialized: false, store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI, collectionName: 'sessions', ttl: 60 * 60 * 24 }), cookie: { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'lax', maxAge: 24 * 60 * 60 * 1000 } }));
 app.engine('hbs', engine({ extname: '.hbs', defaultLayout: 'main', layoutsDir: path.join(__dirname, '..', 'views', 'layouts'), partialsDir: path.join(__dirname, '..', 'views', 'partials') }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '..', 'views'));
-app.use('/', indexRoutes);
+app.use(loadUser);
+app.use(verifyCsrf);
+app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use('/', require('./routes/auth'));
+app.use('/admin', require('./routes/admin-tasks'));
+app.use('/admin', require('./routes/admin'));
+app.use('/', require('./routes'));
 app.use((req, res) => res.status(404).render('not-found', { title: 'Page not found' }));
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(500).render('error', { title: 'Server error' });
-});
-
-async function start() {
-  await connectDatabase();
-  const port = Number(process.env.PORT) || 3000;
-  app.listen(port, () => console.log(`Task Manager: http://localhost:${port}`));
-}
+app.use((err, req, res, next) => { console.error(err); res.status(500).render('error', { title: 'Server error', message: 'An unexpected error occurred.' }); });
+async function start() { await connectDatabase(); const port = Number(process.env.PORT) || 3000; app.listen(port, () => console.log(`Task Manager: http://localhost:${port}`)); }
 if (require.main === module) start().catch(err => { console.error('Startup failed:', err.message); process.exit(1); });
 module.exports = app;
