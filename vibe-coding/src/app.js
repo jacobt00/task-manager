@@ -23,6 +23,7 @@ app.use(loadUser);
 app.use(verifyCsrf);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use('/', require('./routes/auth'));
+app.use('/admin', require('./routes/admin-tasks'));
 app.use('/admin', require('./routes/admin'));
 app.use('/', require('./routes'));
 app.use((req, res) => res.status(404).render('not-found', { title: 'Page not found' }));

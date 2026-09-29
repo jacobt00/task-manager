@@ -1,9 +1,11 @@
 const express = require('express');
 const User = require('../models/User');
+const Task = require('../models/Task');
 const { requireAdmin } = require('../middleware/auth');
+const { expireTasks } = require('../services/tasks');
 const router = express.Router();
 router.use(requireAdmin);
-router.get('/dashboard', async (req, res, next) => { try { res.render('dashboard/admin', { title: 'Admin dashboard', userCount: await User.countDocuments() }); } catch (err) { next(err); } });
+router.get('/dashboard', async (req, res, next) => { try { await expireTasks(); res.render('dashboard/admin', { title: 'Admin dashboard', userCount: await User.countDocuments(), taskCount: await Task.countDocuments(), todoCount: await Task.countDocuments({ status: 'todo' }), doneCount: await Task.countDocuments({ status: 'done' }) }); } catch (err) { next(err); } });
 router.get('/users/new', (req, res) => res.render('admin/new-user', { title: 'Create user' }));
 router.post('/users', async (req, res, next) => {
   try {
