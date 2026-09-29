@@ -1,26 +1,19 @@
-# Task Manager starter
+# TaskFlow — Authentication starter
 
-A runnable foundation using Node.js, Express, Mongoose, Handlebars, HTML, CSS, and JavaScript.
-
-## Requirements
-- Node.js 20+
-- A running local MongoDB server, or a MongoDB Atlas connection string
+Node.js 20+, Express, MongoDB/Mongoose, Handlebars.
 
 ## Setup
-```bash
-npm install
-cp .env.example .env   # On Windows PowerShell: Copy-Item .env.example .env
-npm run dev
-```
-Open http://localhost:3000. Edit `.env` to set `MONGODB_URI` and `PORT` as needed. The app intentionally connects to MongoDB **before** listening, so startup fails clearly if the database is unavailable. `/health` returns `{ "status": "ok" }` when the server is running.
 
-## Structure
-- `src/app.js`: Express configuration and startup
-- `src/config/database.js`: Mongoose connection
-- `src/routes/index.js`: initial routes
-- `src/controllers/`, `src/models/`, `src/middleware/`: reserved for later features
-- `views/`: Handlebars layouts, partials, and pages
-- `public/`: static CSS and JavaScript
+1. `npm install`
+2. Copy `.env.example` to `.env`, set a strong random `SESSION_SECRET` (32+ characters), and configure `MONGODB_URI`.
+3. Ensure MongoDB is running, then `npm run dev`.
+4. Visit http://localhost:3000/register. Public registration always creates a Receiver.
+5. To create the first Admin, run `npm run create-admin` locally (password input is visible in terminal; use a private terminal). Existing accounts are never promoted by this script.
 
-## Scope
-This stage provides a polished landing page, basic error pages, and a working MongoDB connection. It does **not** implement registration, login, authorization, task CRUD, or dashboards yet. The role cards are previews, not functional controls. Before deploying, add session handling, CSRF protection for forms, validation, rate limiting, and a strict Content Security Policy.
+## Routes
+
+- `GET/POST /register`, `GET/POST /login`, `POST /logout`
+- `/dashboard` redirects by role
+- `/receiver/dashboard` requires Receiver; `/admin/dashboard`, `/admin/users/new`, `POST /admin/users` require Admin
+
+Passwords use bcrypt (cost 12). Sessions live in MongoDB, rotate on login/registration, have HTTP-only SameSite=Lax cookies, and are HTTPS-only in production. POST requests use per-session CSRF tokens. Login and registration are rate-limited. Production requires HTTPS and correct `TRUST_PROXY=1` only behind a trusted reverse proxy. Do not expose the admin bootstrap command publicly. Task management is a future phase.
