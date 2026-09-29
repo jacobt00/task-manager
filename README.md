@@ -47,3 +47,35 @@ Commit changes regularly using descriptive commit messages, for example:
 
 When a set of changes is ready, push the working branch and create a
 Pull Request to `main` for review.
+
+## Core Features
+
+## Authentication
+
+- User registration and login.
+
+- Role-based access control (Admin/Sender and Receiver).
+
+## Admin / Sender Interface
+
+- Create new users.
+
+- Create and assign tasks to individual users.
+
+- Edit existing tasks.
+
+- Set and modify task deadlines.
+
+- Manage task access and assignments.
+
+- View task status and progress.
+
+## Receiver Interface
+
+- View assigned tasks.
+
+- Update task status.
+
+- Track and report task progress.
+
+- Cancel assigned tasks.
