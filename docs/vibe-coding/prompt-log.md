@@ -176,7 +176,7 @@ Rate limiting and CSRF is not tested here.
 ## VIBE-003
 
 ### Date and time
-29.9.2026
+29.9.2026 
 
 ### Prompt
 
@@ -300,4 +300,5 @@ The previous implementation supported the agreed status workflow but lacked a UI
 Integrated the updated application and performed local testing.
 
 ## Result
-Successfully tested and verified
+Successfully tested and verified.
+Deadline handling: Manually verified on 30.9.2026. An active task with a passed deadline was automatically changed to failed as expected.
