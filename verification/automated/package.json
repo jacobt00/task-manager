@@ -1,0 +1,18 @@
+{
+  "name": "task-manager-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Specification-based automated tests for the Task Manager requirements (FR-001 to NFR-003)",
+  "scripts": {
+    "test": "playwright test",
+    "test:main": "playwright test --project=main",
+    "test:rate-limit": "playwright test --project=rate-limit --no-deps",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.48.2",
+    "@types/node": "22.7.5",
+    "typescript": "5.6.3"
+  }
+}
