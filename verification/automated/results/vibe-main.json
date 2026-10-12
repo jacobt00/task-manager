@@ -1,0 +1,4359 @@
+{
+  "config": {
+    "configFile": "/root/task-manager/verification/automated/playwright.config.ts",
+    "rootDir": "/root/task-manager/verification/automated/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/root/task-manager/verification/automated/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "main",
+        "name": "main",
+        "testDir": "/root/task-manager/verification/automated/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/root/task-manager/verification/automated/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "rate-limit",
+        "name": "rate-limit",
+        "testDir": "/root/task-manager/verification/automated/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.48.2",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "FR-001.spec.ts",
+      "file": "FR-001.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-001 User registration",
+          "file": "FR-001.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-001 registering with a name, an unused email and a password creates an account that can log in",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 7970,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:45:39.833Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dd60dc0a81e66bcea955-742be4e7db21a40e4c2a",
+              "file": "FR-001.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "TC-002 registration with the name, email or password missing is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 27706,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "name missing",
+                          "duration": 11009
+                        },
+                        {
+                          "title": "email missing",
+                          "duration": 2736
+                        },
+                        {
+                          "title": "password missing",
+                          "duration": 11845
+                        }
+                      ],
+                      "startTime": "2026-10-12T16:45:39.917Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dd60dc0a81e66bcea955-f8820b18e2dcfb6567f3",
+              "file": "FR-001.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "TC-003 registering with an email that is already used is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 14650,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:45:39.931Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dd60dc0a81e66bcea955-2c28a68da2c1a5eec7e8",
+              "file": "FR-001.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "TC-004 a forged role parameter at registration never creates an Admin",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 16388,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:45:39.868Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dd60dc0a81e66bcea955-82982602319c9b8af9d9",
+              "file": "FR-001.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "TC-079 a self-registered user is a Receiver",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 18416,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:45:47.876Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dd60dc0a81e66bcea955-97b0dbb285270af06b92",
+              "file": "FR-001.spec.ts",
+              "line": 53,
+              "column": 7
+            },
+            {
+              "title": "TC-099 registering with an existing email in different letter case is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 16079,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:45:54.638Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dd60dc0a81e66bcea955-88d5dc663a131b76480e",
+              "file": "FR-001.spec.ts",
+              "line": 67,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-002.spec.ts",
+      "file": "FR-002.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-002 User login/logout",
+          "file": "FR-002.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-005 logging in with the correct email and password creates an authenticated session",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 14440,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:45:56.343Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-c4a08d8e46a44123c7c2",
+              "file": "FR-002.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "TC-006 logging in with a wrong password is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 17948,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:06.318Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-4771e508f8cf5f576d93",
+              "file": "FR-002.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "TC-007 logging in with an unknown email is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 3447,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:07.682Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-90f90c75e50accba41f3",
+              "file": "FR-002.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "TC-008 logging out ends the session",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 13812,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:10.751Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-e8f0d6634114d6064f78",
+              "file": "FR-002.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "TC-009 a session cookie replayed after logout is no longer valid",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 14615,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:10.904Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-066a9f406e554003e7fd",
+              "file": "FR-002.spec.ts",
+              "line": 32,
+              "column": 7
+            },
+            {
+              "title": "TC-010 an unauthenticated visitor gets no task data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 20590,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:11.170Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-77d4452f1d3c9bf19e4c",
+              "file": "FR-002.spec.ts",
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "TC-078 each role reaches its own interface after logging in",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 12078,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"reportProgress\"\u001b[39m\nReceived array: \u001b[31m[\"ownTasks\", \"updateStatus\", \"cancelTask\"]\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"reportProgress\"\u001b[39m\nReceived array: \u001b[31m[\"ownTasks\", \"updateStatus\", \"cancelTask\"]\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-002.spec.ts:53:71",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-002.spec.ts",
+                          "column": 71,
+                          "line": 53
+                        },
+                        "snippet": "  51 |     const receiver = await makeUser();\n  52 |     const receiverFeatures = await driver.availableFeatures(receiver.session);\n> 53 |     for (const feature of RECEIVER_FEATURES) expect(receiverFeatures).toContain(feature);\n     |                                                                       ^\n  54 |     for (const feature of ADMIN_FEATURES) expect(receiverFeatures).not.toContain(feature);\n  55 |   });\n  56 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-002.spec.ts",
+                            "column": 71,
+                            "line": 53
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"reportProgress\"\u001b[39m\nReceived array: \u001b[31m[\"ownTasks\", \"updateStatus\", \"cancelTask\"]\u001b[39m\n\n  51 |     const receiver = await makeUser();\n  52 |     const receiverFeatures = await driver.availableFeatures(receiver.session);\n> 53 |     for (const feature of RECEIVER_FEATURES) expect(receiverFeatures).toContain(feature);\n     |                                                                       ^\n  54 |     for (const feature of ADMIN_FEATURES) expect(receiverFeatures).not.toContain(feature);\n  55 |   });\n  56 |\n\n    at /root/task-manager/verification/automated/tests/FR-002.spec.ts:53:71"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:24.298Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-002.spec.ts",
+                        "column": 71,
+                        "line": 53
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-53bc00b7c01435c1e873",
+              "file": "FR-002.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "TC-080 the login error is the same for a wrong password and an unknown email",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 18208,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:24.597Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-0690123d686de7b043fe",
+              "file": "FR-002.spec.ts",
+              "line": 57,
+              "column": 7
+            },
+            {
+              "title": "TC-100 logging in with the email in different letter case succeeds",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 15864,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:25.579Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a82fff28dcd47f0cd469-7b094d01e7f01d2eceea",
+              "file": "FR-002.spec.ts",
+              "line": 66,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-003.spec.ts",
+      "file": "FR-003.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-003 Admin can create users",
+          "file": "FR-003.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-011 the Admin creates a Receiver who can log in to the Receiver interface",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 12186,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:31.865Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bdbcc04f3c83a0f3125a-f2a24348945f39bb4ad7",
+              "file": "FR-003.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "TC-012 creating a user with a missing field or a used email is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 18383,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "name missing",
+                          "duration": 2500
+                        },
+                        {
+                          "title": "email missing",
+                          "duration": 1028
+                        },
+                        {
+                          "title": "password missing",
+                          "duration": 948
+                        },
+                        {
+                          "title": "email already used",
+                          "duration": 8209
+                        }
+                      ],
+                      "startTime": "2026-10-12T16:46:38.512Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bdbcc04f3c83a0f3125a-ab2e6c1da5b0ca72979c",
+              "file": "FR-003.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "TC-013 a Receiver cannot create users",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 10295,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:41.513Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bdbcc04f3c83a0f3125a-e6dff572768631b54135",
+              "file": "FR-003.spec.ts",
+              "line": 35,
+              "column": 7
+            },
+            {
+              "title": "TC-014 an unauthenticated visitor cannot create users",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 5089,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:42.831Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bdbcc04f3c83a0f3125a-6a5df7b36d9faa996770",
+              "file": "FR-003.spec.ts",
+              "line": 44,
+              "column": 7
+            },
+            {
+              "title": "TC-081 the Admin creates another Admin who can log in to the Admin interface",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 7809,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:44.101Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bdbcc04f3c83a0f3125a-6e40acfb0ffca1d0041a",
+              "file": "FR-003.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "TC-101 creating a user with an existing email in different letter case is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 10701,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:47.936Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bdbcc04f3c83a0f3125a-d7c32641939224d63fc1",
+              "file": "FR-003.spec.ts",
+              "line": 59,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-004.spec.ts",
+      "file": "FR-004.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-004 Admin creates a task and assigns it to a single receiver",
+          "file": "FR-004.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-015 a new task starts as todo, assigned only to its receiver",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 7787,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:51.829Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-cd2fdfbfc289572b2614",
+              "file": "FR-004.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "TC-016 a task with two receivers is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 10093,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:51.928Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-c9b536e326bd65748bb1",
+              "file": "FR-004.spec.ts",
+              "line": 15,
+              "column": 7
+            },
+            {
+              "title": "TC-017 a task for a user that does not exist is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 2661,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:56.948Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-69e66d0dd7f37f27acbe",
+              "file": "FR-004.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "TC-018 a Receiver cannot create tasks",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 5298,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:58.650Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-cd5d65adb992f8265cac",
+              "file": "FR-004.spec.ts",
+              "line": 29,
+              "column": 7
+            },
+            {
+              "title": "TC-082 a task with no receiver is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 2441,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:59.619Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-e231b29cd95f28353bdd",
+              "file": "FR-004.spec.ts",
+              "line": 36,
+              "column": 7
+            },
+            {
+              "title": "TC-083 a task cannot be assigned to an Admin",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "failed",
+                      "duration": 2900,
+                      "error": {
+                        "message": "Error: precondition: the Admin can create the admin admin.mv5hiquz3e931d42@example.test\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: precondition: the Admin can create the admin admin.mv5hiquz3e931d42@example.test\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/src/fixtures.ts:82:90\n    at /root/task-manager/verification/automated/tests/FR-004.spec.ts:43:24",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/src/fixtures.ts",
+                          "column": 90,
+                          "line": 82
+                        },
+                        "snippet": "   at ../src/fixtures.ts:82\n\n  80 |       await driver.createUser(admin, account);\n  81 |       const ref = await driver.userRef(admin, account.email);\n> 82 |       expect(ref, `precondition: the Admin can create the ${role} ${account.email}`).not.toBeNull();\n     |                                                                                          ^\n  83 |       const session = await newSession();\n  84 |       const login = await driver.login(session, account.email, account.password);\n  85 |       expect(login.ok, `precondition: ${account.email} can log in`).toBe(true);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/src/fixtures.ts",
+                            "column": 90,
+                            "line": 82
+                          },
+                          "message": "Error: precondition: the Admin can create the admin admin.mv5hiquz3e931d42@example.test\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mnull\u001b[39m\n\n   at ../src/fixtures.ts:82\n\n  80 |       await driver.createUser(admin, account);\n  81 |       const ref = await driver.userRef(admin, account.email);\n> 82 |       expect(ref, `precondition: the Admin can create the ${role} ${account.email}`).not.toBeNull();\n     |                                                                                          ^\n  83 |       const session = await newSession();\n  84 |       const login = await driver.login(session, account.email, account.password);\n  85 |       expect(login.ok, `precondition: ${account.email} can log in`).toBe(true);\n\n    at /root/task-manager/verification/automated/src/fixtures.ts:82:90\n    at /root/task-manager/verification/automated/tests/FR-004.spec.ts:43:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:46:59.626Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/src/fixtures.ts",
+                        "column": 90,
+                        "line": 82
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-290f498c362f82b95048",
+              "file": "FR-004.spec.ts",
+              "line": 42,
+              "column": 7
+            },
+            {
+              "title": "TC-084 a forged starting status is never used",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 7551,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:02.033Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-70e7df51117ba8d26d09",
+              "file": "FR-004.spec.ts",
+              "line": 53,
+              "column": 7
+            },
+            {
+              "title": "TC-085 a task with a deadline in the past is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 6421,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:02.068Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-496a15546916c2df3e98",
+              "file": "FR-004.spec.ts",
+              "line": 64,
+              "column": 7
+            },
+            {
+              "title": "TC-086 a task without a deadline is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 6462,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:03.197Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1eb2a52c525a9b741399-f0c9135158e333df5fdc",
+              "file": "FR-004.spec.ts",
+              "line": 71,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-005.spec.ts",
+      "file": "FR-005.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-005 Admin edits a task and its deadline",
+          "file": "FR-005.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-019 the Admin edits the details of an active task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 8068,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:03.985Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-94b41390ce1939920483",
+              "file": "FR-005.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "TC-020 the Admin moves the deadline of an active task to a later date",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 6407,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:08.500Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-d53bb5f3c2f59a552b03",
+              "file": "FR-005.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "TC-021 a malformed deadline is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 6746,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:09.603Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-9cd82ee134bb0c45c243",
+              "file": "FR-005.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "TC-022 a Receiver cannot change the deadline of their own task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 7378,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:09.689Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-2f04e35bfb9290b2fd91",
+              "file": "FR-005.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "TC-050 the Admin sees a status change made by the receiver",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 6940,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:12.066Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-be086fe3cfccd5913e6c",
+              "file": "FR-005.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "TC-065 the Admin task overview lists every task with its assignee and status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 14335,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:14.926Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-10a113dd989e48e8e76f",
+              "file": "FR-005.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "TC-066 a Receiver cannot open the Admin task overview",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 8468,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:16.366Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-37e56c1407b1c6e149c3",
+              "file": "FR-005.spec.ts",
+              "line": 58,
+              "column": 7
+            },
+            {
+              "title": "TC-068 the Admin cannot change the deadline of a terminal task",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "failed",
+                      "duration": 9119,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"2026-10-\u001b[7m19\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"2026-10-\u001b[7m26\u001b[27m\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"2026-10-\u001b[7m19\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"2026-10-\u001b[7m26\u001b[27m\"\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:71:32\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:66:7",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-005.spec.ts",
+                          "column": 32,
+                          "line": 71
+                        },
+                        "snippet": "  69 |         await driver.editTask(admin, task, { deadline: dateFromToday(14) });\n  70 |         const after = await adminView(task);\n> 71 |         expect(after.deadline).toBe(before.deadline);\n     |                                ^\n  72 |         expect(after.status).toBe(status);\n  73 |       });\n  74 |     }"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-005.spec.ts",
+                            "column": 32,
+                            "line": 71
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"2026-10-\u001b[7m19\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"2026-10-\u001b[7m26\u001b[27m\"\u001b[39m\n\n  69 |         await driver.editTask(admin, task, { deadline: dateFromToday(14) });\n  70 |         const after = await adminView(task);\n> 71 |         expect(after.deadline).toBe(before.deadline);\n     |                                ^\n  72 |         expect(after.status).toBe(status);\n  73 |       });\n  74 |     }\n\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:71:32\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:66:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "done",
+                          "duration": 7171,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"2026-10-\u001b[7m19\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"2026-10-\u001b[7m26\u001b[27m\"\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"2026-10-\u001b[7m19\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"2026-10-\u001b[7m26\u001b[27m\"\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:71:32\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:66:7",
+                            "location": {
+                              "file": "/root/task-manager/verification/automated/tests/FR-005.spec.ts",
+                              "column": 32,
+                              "line": 71
+                            },
+                            "snippet": "  69 |         await driver.editTask(admin, task, { deadline: dateFromToday(14) });\n  70 |         const after = await adminView(task);\n> 71 |         expect(after.deadline).toBe(before.deadline);\n     |                                ^\n  72 |         expect(after.status).toBe(status);\n  73 |       });\n  74 |     }"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-12T16:47:17.078Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-005.spec.ts",
+                        "column": 32,
+                        "line": 71
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-cf534da724caa80ee541",
+              "file": "FR-005.spec.ts",
+              "line": 64,
+              "column": 7
+            },
+            {
+              "title": "TC-070 the Admin sets a deadline when creating a task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 5667,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:19.016Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-7069bd78f99c915c0f80",
+              "file": "FR-005.spec.ts",
+              "line": 77,
+              "column": 7
+            },
+            {
+              "title": "TC-071 a task with a malformed deadline is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 4596,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:24.699Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-8319313105faa637b567",
+              "file": "FR-005.spec.ts",
+              "line": 87,
+              "column": 7
+            },
+            {
+              "title": "TC-072 a Receiver cannot change the title or description of their own task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 7455,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:24.853Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-0c2a8407fc4cb859b9d5",
+              "file": "FR-005.spec.ts",
+              "line": 94,
+              "column": 7
+            },
+            {
+              "title": "TC-102 the Admin cannot move an active task deadline into the past",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "passed",
+                      "duration": 13507,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "todo",
+                          "duration": 5910
+                        },
+                        {
+                          "title": "ongoing",
+                          "duration": 5441
+                        }
+                      ],
+                      "startTime": "2026-10-12T16:47:27.150Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-9ed7fb2d8a6fb338ab74",
+              "file": "FR-005.spec.ts",
+              "line": 101,
+              "column": 7
+            },
+            {
+              "title": "TC-103 the Admin cannot remove the deadline of an active task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 6553,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:29.276Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-d9970f78b2e1f12600f7",
+              "file": "FR-005.spec.ts",
+              "line": 114,
+              "column": 7
+            },
+            {
+              "title": "TC-104 the Admin cannot change the title or description of a terminal task",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "failed",
+                      "duration": 8982,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"assigneeEmail\": \"receiver.mv5hjdhf0db35312@example.test\",\u001b[22m\n\u001b[2m    \"deadline\": \"2026-10-19\",\u001b[22m\n\u001b[32m-   \"description\": \"Description mv5hjfyjdf0104a6\",\u001b[39m\n\u001b[31m+   \"description\": \"Edited mv5hji58f4873bce\",\u001b[39m\n\u001b[2m    \"progress\": null,\u001b[22m\n\u001b[2m    \"ref\": \"6acd0f26c23cf49c590a7d09\",\u001b[22m\n\u001b[2m    \"status\": \"done\",\u001b[22m\n\u001b[32m-   \"title\": \"Task mv5hjfyj892f21ad\",\u001b[39m\n\u001b[31m+   \"title\": \"Edited mv5hji58e4e7f321\",\u001b[39m\n\u001b[2m  }\u001b[22m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"assigneeEmail\": \"receiver.mv5hjdhf0db35312@example.test\",\u001b[22m\n\u001b[2m    \"deadline\": \"2026-10-19\",\u001b[22m\n\u001b[32m-   \"description\": \"Description mv5hjfyjdf0104a6\",\u001b[39m\n\u001b[31m+   \"description\": \"Edited mv5hji58f4873bce\",\u001b[39m\n\u001b[2m    \"progress\": null,\u001b[22m\n\u001b[2m    \"ref\": \"6acd0f26c23cf49c590a7d09\",\u001b[22m\n\u001b[2m    \"status\": \"done\",\u001b[22m\n\u001b[32m-   \"title\": \"Task mv5hjfyj892f21ad\",\u001b[39m\n\u001b[31m+   \"title\": \"Edited mv5hji58e4e7f321\",\u001b[39m\n\u001b[2m  }\u001b[22m\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:127:39\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:123:7",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-005.spec.ts",
+                          "column": 39,
+                          "line": 127
+                        },
+                        "snippet": "  125 |         const before = await adminView(task);\n  126 |         await driver.editTask(admin, task, { title: uniqueTitle('Edited'), description: `Edited ${token()}` });\n> 127 |         expect(await adminView(task)).toEqual(before);\n      |                                       ^\n  128 |       });\n  129 |     }\n  130 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-005.spec.ts",
+                            "column": 39,
+                            "line": 127
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"assigneeEmail\": \"receiver.mv5hjdhf0db35312@example.test\",\u001b[22m\n\u001b[2m    \"deadline\": \"2026-10-19\",\u001b[22m\n\u001b[32m-   \"description\": \"Description mv5hjfyjdf0104a6\",\u001b[39m\n\u001b[31m+   \"description\": \"Edited mv5hji58f4873bce\",\u001b[39m\n\u001b[2m    \"progress\": null,\u001b[22m\n\u001b[2m    \"ref\": \"6acd0f26c23cf49c590a7d09\",\u001b[22m\n\u001b[2m    \"status\": \"done\",\u001b[22m\n\u001b[32m-   \"title\": \"Task mv5hjfyj892f21ad\",\u001b[39m\n\u001b[31m+   \"title\": \"Edited mv5hji58e4e7f321\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  125 |         const before = await adminView(task);\n  126 |         await driver.editTask(admin, task, { title: uniqueTitle('Edited'), description: `Edited ${token()}` });\n> 127 |         expect(await adminView(task)).toEqual(before);\n      |                                       ^\n  128 |       });\n  129 |     }\n  130 |   });\n\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:127:39\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:123:7"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "done",
+                          "duration": 7473,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"assigneeEmail\": \"receiver.mv5hjdhf0db35312@example.test\",\u001b[22m\n\u001b[2m    \"deadline\": \"2026-10-19\",\u001b[22m\n\u001b[32m-   \"description\": \"Description mv5hjfyjdf0104a6\",\u001b[39m\n\u001b[31m+   \"description\": \"Edited mv5hji58f4873bce\",\u001b[39m\n\u001b[2m    \"progress\": null,\u001b[22m\n\u001b[2m    \"ref\": \"6acd0f26c23cf49c590a7d09\",\u001b[22m\n\u001b[2m    \"status\": \"done\",\u001b[22m\n\u001b[32m-   \"title\": \"Task mv5hjfyj892f21ad\",\u001b[39m\n\u001b[31m+   \"title\": \"Edited mv5hji58e4e7f321\",\u001b[39m\n\u001b[2m  }\u001b[22m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"assigneeEmail\": \"receiver.mv5hjdhf0db35312@example.test\",\u001b[22m\n\u001b[2m    \"deadline\": \"2026-10-19\",\u001b[22m\n\u001b[32m-   \"description\": \"Description mv5hjfyjdf0104a6\",\u001b[39m\n\u001b[31m+   \"description\": \"Edited mv5hji58f4873bce\",\u001b[39m\n\u001b[2m    \"progress\": null,\u001b[22m\n\u001b[2m    \"ref\": \"6acd0f26c23cf49c590a7d09\",\u001b[22m\n\u001b[2m    \"status\": \"done\",\u001b[22m\n\u001b[32m-   \"title\": \"Task mv5hjfyj892f21ad\",\u001b[39m\n\u001b[31m+   \"title\": \"Edited mv5hji58e4e7f321\",\u001b[39m\n\u001b[2m  }\u001b[22m\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:127:39\n    at /root/task-manager/verification/automated/tests/FR-005.spec.ts:123:7",
+                            "location": {
+                              "file": "/root/task-manager/verification/automated/tests/FR-005.spec.ts",
+                              "column": 39,
+                              "line": 127
+                            },
+                            "snippet": "  125 |         const before = await adminView(task);\n  126 |         await driver.editTask(admin, task, { title: uniqueTitle('Edited'), description: `Edited ${token()}` });\n> 127 |         expect(await adminView(task)).toEqual(before);\n      |                                       ^\n  128 |       });\n  129 |     }\n  130 |   });"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-12T16:47:29.306Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-005.spec.ts",
+                        "column": 39,
+                        "line": 127
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "59e96dc043364b289a91-a8653ca1c5f4d548b60c",
+              "file": "FR-005.spec.ts",
+              "line": 121,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-006.spec.ts",
+      "file": "FR-006.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-006 Receiver can only view their own tasks",
+          "file": "FR-006.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-023 a Receiver sees only their own tasks",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 8102,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:32.324Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b3dfd76503ca9113ea4c-f14c9309eacdff46130f",
+              "file": "FR-006.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "TC-024 a Receiver with no tasks sees an empty list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 7434,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:35.839Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b3dfd76503ca9113ea4c-365452ba14a239cebeb3",
+              "file": "FR-006.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "TC-025 a Receiver cannot open another receiver's task by its reference",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 9481,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:39.064Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b3dfd76503ca9113ea4c-b0522a906d01d75206ac",
+              "file": "FR-006.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "TC-026 a Receiver cannot change the status of another receiver's task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 9123,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:40.436Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b3dfd76503ca9113ea4c-00cba0c7c46a643c2095",
+              "file": "FR-006.spec.ts",
+              "line": 26,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-007.spec.ts",
+      "file": "FR-007.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-007 Status transitions follow the transition table",
+          "file": "FR-007.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-027a a Receiver changes their own task from todo to ongoing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "passed",
+                      "duration": 7282,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:40.689Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-726c67ea360e81b6fc99",
+              "file": "FR-007.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "TC-027b a Receiver changes their own task from ongoing to done",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 7245,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:43.283Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-a0235d79f7b13b2e4610",
+              "file": "FR-007.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "TC-027c a Receiver changes their own task from todo to failed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "passed",
+                      "duration": 5986,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:47.983Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-9d415b7206b711c49937",
+              "file": "FR-007.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "TC-027d a Receiver changes their own task from ongoing to failed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 6137,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:48.575Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-c7755d9e776f8a299322",
+              "file": "FR-007.spec.ts",
+              "line": 13,
+              "column": 9
+            },
+            {
+              "title": "TC-028a a Receiver cannot change their own task from todo to done",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 5104,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:49.572Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-c8fdd4fa94afd412210f",
+              "file": "FR-007.spec.ts",
+              "line": 25,
+              "column": 9
+            },
+            {
+              "title": "TC-028b a Receiver cannot change their own task from ongoing to todo",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 6093,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:50.539Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-e13d2857f31b35bf8186",
+              "file": "FR-007.spec.ts",
+              "line": 25,
+              "column": 9
+            },
+            {
+              "title": "TC-029 a Receiver cannot move their own done task to any other status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "passed",
+                      "duration": 7221,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:53.979Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-537f99f925156f35062b",
+              "file": "FR-007.spec.ts",
+              "line": 38,
+              "column": 9
+            },
+            {
+              "title": "TC-030 a Receiver cannot move their own cancelled task to any other status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 6600,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:54.685Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-48bd4e71c739b8451e3b",
+              "file": "FR-007.spec.ts",
+              "line": 38,
+              "column": 9
+            },
+            {
+              "title": "TC-031 a Receiver cannot move their own failed task to any other status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 6703,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:54.723Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-dfc501880701c90d4106",
+              "file": "FR-007.spec.ts",
+              "line": 38,
+              "column": 9
+            },
+            {
+              "title": "TC-032 the Admin cannot move a terminal task to any other status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 19654,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:47:56.643Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-8e01ca968562bf5c70a0",
+              "file": "FR-007.spec.ts",
+              "line": 47,
+              "column": 7
+            },
+            {
+              "title": "TC-033 a status value that is not one of the five is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "passed",
+                      "duration": 5847,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:01.212Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-5511108735f80548fc14",
+              "file": "FR-007.spec.ts",
+              "line": 57,
+              "column": 7
+            },
+            {
+              "title": "TC-096 an active task cannot be set to the status it already has",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 6996,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:01.298Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-2fb2221ff80defc1bde7",
+              "file": "FR-007.spec.ts",
+              "line": 65,
+              "column": 7
+            },
+            {
+              "title": "TC-097 a terminal task cannot be set to the status it already has",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 16895,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:01.438Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-4d0ddda62e182650720e",
+              "file": "FR-007.spec.ts",
+              "line": 76,
+              "column": 7
+            },
+            {
+              "title": "TC-098 the Admin cannot make status changes other than cancelling",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "failed",
+                      "duration": 5322,
+                      "error": {
+                        "message": "Error: Admin todo -> ongoing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"todo\"\u001b[39m\nReceived: \u001b[31m\"ongoing\"\u001b[39m",
+                        "stack": "Error: Admin todo -> ongoing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"todo\"\u001b[39m\nReceived: \u001b[31m\"ongoing\"\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-007.spec.ts:97:72",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-007.spec.ts",
+                          "column": 72,
+                          "line": 97
+                        },
+                        "snippet": "   95 |       const { task } = await taskIn(from, receiver);\n   96 |       await driver.changeStatus(admin, task, to);\n>  97 |       expect((await adminView(task)).status, `Admin ${from} -> ${to}`).toBe(from);\n      |                                                                        ^\n   98 |     }\n   99 |   });\n  100 | });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-007.spec.ts",
+                            "column": 72,
+                            "line": 97
+                          },
+                          "message": "Error: Admin todo -> ongoing\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"todo\"\u001b[39m\nReceived: \u001b[31m\"ongoing\"\u001b[39m\n\n   95 |       const { task } = await taskIn(from, receiver);\n   96 |       await driver.changeStatus(admin, task, to);\n>  97 |       expect((await adminView(task)).status, `Admin ${from} -> ${to}`).toBe(from);\n      |                                                                        ^\n   98 |     }\n   99 |   });\n  100 | });\n\n    at /root/task-manager/verification/automated/tests/FR-007.spec.ts:97:72"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:07.077Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-007.spec.ts",
+                        "column": 72,
+                        "line": 97
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9096773b4bda4db2f5e4-2648a25914946739508c",
+              "file": "FR-007.spec.ts",
+              "line": 86,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-008.spec.ts",
+      "file": "FR-008.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-008 A task whose deadline has passed is automatically set to failed",
+          "file": "FR-008.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-034a an overdue todo task becomes failed without user action",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "failed",
+                      "duration": 5043,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"failed\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"failed\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-008.spec.ts:18:71",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-008.spec.ts",
+                          "column": 71,
+                          "line": 18
+                        },
+                        "snippet": "  16 |       await driver.forceDeadline!(task, PAST());\n  17 |       await expect.poll(async () => (await adminView(task)).status, { timeout: AUTOFAIL_TIMEOUT }).toBe('failed');\n> 18 |       expect((await driver.viewTask(receiver.session, task))?.status).toBe('failed');\n     |                                                                       ^\n  19 |     });\n  20 |   }\n  21 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-008.spec.ts",
+                            "column": 71,
+                            "line": 18
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"failed\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n  16 |       await driver.forceDeadline!(task, PAST());\n  17 |       await expect.poll(async () => (await adminView(task)).status, { timeout: AUTOFAIL_TIMEOUT }).toBe('failed');\n> 18 |       expect((await driver.viewTask(receiver.session, task))?.status).toBe('failed');\n     |                                                                       ^\n  19 |     });\n  20 |   }\n  21 |\n\n    at /root/task-manager/verification/automated/tests/FR-008.spec.ts:18:71"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:08.305Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-008.spec.ts",
+                        "column": 71,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "984c1f7dd48af22d1447-617361c67019f8bc32d2",
+              "file": "FR-008.spec.ts",
+              "line": 12,
+              "column": 9
+            },
+            {
+              "title": "TC-034b an overdue ongoing task becomes failed without user action",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "status": "failed",
+                      "duration": 7400,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"failed\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"failed\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-008.spec.ts:18:71",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-008.spec.ts",
+                          "column": 71,
+                          "line": 18
+                        },
+                        "snippet": "  16 |       await driver.forceDeadline!(task, PAST());\n  17 |       await expect.poll(async () => (await adminView(task)).status, { timeout: AUTOFAIL_TIMEOUT }).toBe('failed');\n> 18 |       expect((await driver.viewTask(receiver.session, task))?.status).toBe('failed');\n     |                                                                       ^\n  19 |     });\n  20 |   }\n  21 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-008.spec.ts",
+                            "column": 71,
+                            "line": 18
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"failed\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n  16 |       await driver.forceDeadline!(task, PAST());\n  17 |       await expect.poll(async () => (await adminView(task)).status, { timeout: AUTOFAIL_TIMEOUT }).toBe('failed');\n> 18 |       expect((await driver.viewTask(receiver.session, task))?.status).toBe('failed');\n     |                                                                       ^\n  19 |     });\n  20 |   }\n  21 |\n\n    at /root/task-manager/verification/automated/tests/FR-008.spec.ts:18:71"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:13.267Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-008.spec.ts",
+                        "column": 71,
+                        "line": 18
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "984c1f7dd48af22d1447-e86c8a038113dc7be55b",
+              "file": "FR-008.spec.ts",
+              "line": 12,
+              "column": 9
+            },
+            {
+              "title": "TC-035 an active task with a future deadline is not failed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 7361,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:14.468Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "984c1f7dd48af22d1447-037a6d010fe282f15556",
+              "file": "FR-008.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "TC-036 an overdue done task stays done",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 6642,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:16.309Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "984c1f7dd48af22d1447-1e06efb2b5f8d78ac1ff",
+              "file": "FR-008.spec.ts",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "TC-037 an overdue cancelled task stays cancelled",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 6577,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:18.350Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "984c1f7dd48af22d1447-eaaceb8e8a34aea5f639",
+              "file": "FR-008.spec.ts",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "TC-038 a task that was auto-failed cannot be moved to any other status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "status": "passed",
+                      "duration": 12355,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:21.577Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "984c1f7dd48af22d1447-42b9dac7d760d6d13189",
+              "file": "FR-008.spec.ts",
+              "line": 44,
+              "column": 7
+            },
+            {
+              "title": "TC-067 moving the deadline later before it passes keeps the task active",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "not automated",
+                      "description": "Needs control of the server clock"
+                    },
+                    {
+                      "type": "skip",
+                      "description": "Not automated: the original deadline must pass in real time while the new one is still ahead. That needs control of the server clock, which a black-box suite does not have. Run it manually."
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "skipped",
+                      "duration": 5,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:21.860Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "984c1f7dd48af22d1447-e2c172a364058dc0cf17",
+              "file": "FR-008.spec.ts",
+              "line": 56,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-009.spec.ts",
+      "file": "FR-009.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-009 The assigned receiver and an Admin can cancel an active task",
+          "file": "FR-009.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-039a a Receiver cancels their own todo task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 7759,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:21.877Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d6073bbd3bcb19161beb-d84d17e1f0d3362d2bfb",
+              "file": "FR-009.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "TC-039b a Receiver cancels their own ongoing task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 7924,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:22.966Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d6073bbd3bcb19161beb-8cb837114a5397a3b69c",
+              "file": "FR-009.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "TC-040 the Admin cancels a todo or ongoing task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 11203,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:24.950Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d6073bbd3bcb19161beb-bce850008bc0f08d56f3",
+              "file": "FR-009.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "TC-041 a Receiver cannot cancel another receiver's task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 8322,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:29.651Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d6073bbd3bcb19161beb-1d9f57dab25d8f8b15c5",
+              "file": "FR-009.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "TC-042 a done or failed task cannot be cancelled by its owner or the Admin",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 13581,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:30.907Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d6073bbd3bcb19161beb-82ff8ab95b255dcd581e",
+              "file": "FR-009.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "TC-043 a cancelled task cannot be cancelled again",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "status": "passed",
+                      "duration": 7159,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:33.971Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d6073bbd3bcb19161beb-db96bf2179eb333a1299",
+              "file": "FR-009.spec.ts",
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "TC-044 an unauthenticated visitor cannot cancel a task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 5613,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:36.168Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d6073bbd3bcb19161beb-17ae5c63a69769af5c77",
+              "file": "FR-009.spec.ts",
+              "line": 48,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-010.spec.ts",
+      "file": "FR-010.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-010 Reassigning a task resets its status to todo",
+          "file": "FR-010.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-045 reassigning an ongoing task resets it to todo for the new receiver",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 8144,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:37.991Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-e1ff0a776a064fc71a3a",
+              "file": "FR-010.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "TC-046 the previous receiver loses access after reassignment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "status": "passed",
+                      "duration": 9948,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:41.148Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-4c37c7722f2ce861bcfc",
+              "file": "FR-010.spec.ts",
+              "line": 14,
+              "column": 7
+            },
+            {
+              "title": "TC-047 the new receiver sees the reassigned task as todo",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 9392,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:41.796Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-a80849b6fca3b65c548e",
+              "file": "FR-010.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "TC-048 a terminal task cannot be reassigned",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 20115,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:44.499Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-14a9b8351d21bafd1274",
+              "file": "FR-010.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "TC-049 a Receiver cannot reassign their own task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 9436,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:46.146Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-a445f6a64b459237006a",
+              "file": "FR-010.spec.ts",
+              "line": 42,
+              "column": 7
+            },
+            {
+              "title": "TC-069 reassigning a todo task keeps it todo",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "status": "passed",
+                      "duration": 8224,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:51.107Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-db059bc093b8f3e9a344",
+              "file": "FR-010.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "TC-076 reassigning to a user that does not exist is rejected without a reset",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 7517,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:51.202Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-b6f5b384fb97420c0f10",
+              "file": "FR-010.spec.ts",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "TC-077 the new receiver can manage the reassigned task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 8458,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:55.594Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-05b27e0d047777577590",
+              "file": "FR-010.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "TC-087 a task cannot be reassigned to an Admin",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "failed",
+                      "duration": 6354,
+                      "error": {
+                        "message": "Error: precondition: the Admin can create the admin admin.mv5hldek580c4854@example.test\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: precondition: the Admin can create the admin admin.mv5hldek580c4854@example.test\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/src/fixtures.ts:82:90\n    at /root/task-manager/verification/automated/tests/FR-010.spec.ts:78:24",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/src/fixtures.ts",
+                          "column": 90,
+                          "line": 82
+                        },
+                        "snippet": "   at ../src/fixtures.ts:82\n\n  80 |       await driver.createUser(admin, account);\n  81 |       const ref = await driver.userRef(admin, account.email);\n> 82 |       expect(ref, `precondition: the Admin can create the ${role} ${account.email}`).not.toBeNull();\n     |                                                                                          ^\n  83 |       const session = await newSession();\n  84 |       const login = await driver.login(session, account.email, account.password);\n  85 |       expect(login.ok, `precondition: ${account.email} can log in`).toBe(true);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/src/fixtures.ts",
+                            "column": 90,
+                            "line": 82
+                          },
+                          "message": "Error: precondition: the Admin can create the admin admin.mv5hldek580c4854@example.test\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBeNull\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mnull\u001b[39m\n\n   at ../src/fixtures.ts:82\n\n  80 |       await driver.createUser(admin, account);\n  81 |       const ref = await driver.userRef(admin, account.email);\n> 82 |       expect(ref, `precondition: the Admin can create the ${role} ${account.email}`).not.toBeNull();\n     |                                                                                          ^\n  83 |       const session = await newSession();\n  84 |       const login = await driver.login(session, account.email, account.password);\n  85 |       expect(login.ok, `precondition: ${account.email} can log in`).toBe(true);\n\n    at /root/task-manager/verification/automated/src/fixtures.ts:82:90\n    at /root/task-manager/verification/automated/tests/FR-010.spec.ts:78:24"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:58.731Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/src/fixtures.ts",
+                        "column": 90,
+                        "line": 82
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-d5084afd1e2e9eacaf4d",
+              "file": "FR-010.spec.ts",
+              "line": 76,
+              "column": 7
+            },
+            {
+              "title": "TC-088 a terminal task cannot be reassigned to its own receiver either",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "status": "passed",
+                      "duration": 18113,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:48:59.340Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-52b9112e589df8cdfc03",
+              "file": "FR-010.spec.ts",
+              "line": 85,
+              "column": 7
+            },
+            {
+              "title": "TC-089 progress stays with the task after reassignment",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "failed",
+                      "duration": 6339,
+                      "error": {
+                        "message": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m60\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m60\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-010.spec.ts:97:81",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-010.spec.ts",
+                          "column": 81,
+                          "line": 97
+                        },
+                        "snippet": "   95 |     const { task, receiver: a } = await taskIn('ongoing');\n   96 |     await driver.reportProgress(a.session, task, 60);\n>  97 |     expect((await adminView(task)).progress, 'precondition: progress recorded').toBe(60);\n      |                                                                                 ^\n   98 |     const b = await makeUser();\n   99 |     await driver.reassignTask(admin, task, b.ref);\n  100 |     const asAdmin = await adminView(task);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-010.spec.ts",
+                            "column": 81,
+                            "line": 97
+                          },
+                          "message": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m60\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n   95 |     const { task, receiver: a } = await taskIn('ongoing');\n   96 |     await driver.reportProgress(a.session, task, 60);\n>  97 |     expect((await adminView(task)).progress, 'precondition: progress recorded').toBe(60);\n      |                                                                                 ^\n   98 |     const b = await makeUser();\n   99 |     await driver.reassignTask(admin, task, b.ref);\n  100 |     const asAdmin = await adminView(task);\n\n    at /root/task-manager/verification/automated/tests/FR-010.spec.ts:97:81"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:04.062Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-010.spec.ts",
+                        "column": 81,
+                        "line": 97
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-db04cbea068e698ae698",
+              "file": "FR-010.spec.ts",
+              "line": 94,
+              "column": 7
+            },
+            {
+              "title": "TC-090 the previous receiver can no longer see the task's progress",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "failed",
+                      "duration": 5923,
+                      "error": {
+                        "message": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-010.spec.ts:109:81",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-010.spec.ts",
+                          "column": 81,
+                          "line": 109
+                        },
+                        "snippet": "  107 |     const { task, receiver: a } = await taskIn('ongoing');\n  108 |     await driver.reportProgress(a.session, task, 50);\n> 109 |     expect((await adminView(task)).progress, 'precondition: progress recorded').toBe(50);\n      |                                                                                 ^\n  110 |     const b = await makeUser();\n  111 |     await driver.reassignTask(admin, task, b.ref);\n  112 |     expect(await driver.viewTask(a.session, task)).toBeNull();"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-010.spec.ts",
+                            "column": 81,
+                            "line": 109
+                          },
+                          "message": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m50\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  107 |     const { task, receiver: a } = await taskIn('ongoing');\n  108 |     await driver.reportProgress(a.session, task, 50);\n> 109 |     expect((await adminView(task)).progress, 'precondition: progress recorded').toBe(50);\n      |                                                                                 ^\n  110 |     const b = await makeUser();\n  111 |     await driver.reassignTask(admin, task, b.ref);\n  112 |     expect(await driver.viewTask(a.session, task)).toBeNull();\n\n    at /root/task-manager/verification/automated/tests/FR-010.spec.ts:109:81"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:04.624Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-010.spec.ts",
+                        "column": 81,
+                        "line": 109
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-02429e95a16ce56f9620",
+              "file": "FR-010.spec.ts",
+              "line": 106,
+              "column": 7
+            },
+            {
+              "title": "TC-105 saving an active task with its current receiver is not a reassignment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "status": "passed",
+                      "duration": 6066,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:05.757Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ba29bcf888ffec82aae2-acd32f4500e0026ab3dc",
+              "file": "FR-010.spec.ts",
+              "line": 115,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FR-011.spec.ts",
+      "file": "FR-011.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-011 Receiver can track and report task progress",
+          "file": "FR-011.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-051 a Receiver cannot record progress on another receiver's task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "status": "passed",
+                      "duration": 10805,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:11.467Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-33308a2cf2f15acd7ebf",
+              "file": "FR-011.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "TC-052 progress cannot be recorded on a terminal task",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "status": "passed",
+                      "duration": 17531,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:11.644Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-d293e0faa39dbeea7c4e",
+              "file": "FR-011.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "TC-073 a Receiver records progress and sees it on the task",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "status": "failed",
+                      "duration": 7156,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:27:71",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                          "column": 71,
+                          "line": 27
+                        },
+                        "snippet": "  25 |     const { task, receiver } = await taskIn('ongoing');\n  26 |     await driver.reportProgress(receiver.session, task, 40);\n> 27 |     expect((await driver.viewTask(receiver.session, task))?.progress).toBe(40);\n     |                                                                       ^\n  28 |   });\n  29 |\n  30 |   test(\"TC-074 the Admin sees the receiver's progress\", async ({ driver, admin, taskIn, adminView }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                            "column": 71,
+                            "line": 27
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  25 |     const { task, receiver } = await taskIn('ongoing');\n  26 |     await driver.reportProgress(receiver.session, task, 40);\n> 27 |     expect((await driver.viewTask(receiver.session, task))?.progress).toBe(40);\n     |                                                                       ^\n  28 |   });\n  29 |\n  30 |   test(\"TC-074 the Admin sees the receiver's progress\", async ({ driver, admin, taskIn, adminView }) => {\n\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:27:71"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:11.855Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                        "column": 71,
+                        "line": 27
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-28e0d390f14ce9158b66",
+              "file": "FR-011.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "TC-074 the Admin sees the receiver's progress",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "status": "failed",
+                      "duration": 5852,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:33:46",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                          "column": 46,
+                          "line": 33
+                        },
+                        "snippet": "  31 |     const { task, receiver } = await taskIn('ongoing');\n  32 |     await driver.reportProgress(receiver.session, task, 40);\n> 33 |     expect((await adminView(task)).progress).toBe(40);\n     |                                              ^\n  34 |     const all = await driver.listAllTasks(admin);\n  35 |     expect(all?.find((t) => t.ref === task)?.progress).toBe(40);\n  36 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                            "column": 46,
+                            "line": 33
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  31 |     const { task, receiver } = await taskIn('ongoing');\n  32 |     await driver.reportProgress(receiver.session, task, 40);\n> 33 |     expect((await adminView(task)).progress).toBe(40);\n     |                                              ^\n  34 |     const all = await driver.listAllTasks(admin);\n  35 |     expect(all?.find((t) => t.ref === task)?.progress).toBe(40);\n  36 |   });\n\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:33:46"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:17.474Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                        "column": 46,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-4d93522bd7bd9ddf9033",
+              "file": "FR-011.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "TC-075 a Receiver cannot see the progress of another receiver's task",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "status": "failed",
+                      "duration": 9107,
+                      "error": {
+                        "message": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:42:81",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                          "column": 81,
+                          "line": 42
+                        },
+                        "snippet": "  40 |     const { task, receiver: b } = await taskIn('ongoing');\n  41 |     await driver.reportProgress(b.session, task, 40);\n> 42 |     expect((await adminView(task)).progress, 'precondition: progress recorded').toBe(40);\n     |                                                                                 ^\n  43 |     expect(await driver.viewTask(a.session, task)).toBeNull();\n  44 |   });\n  45 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                            "column": 81,
+                            "line": 42
+                          },
+                          "message": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  40 |     const { task, receiver: b } = await taskIn('ongoing');\n  41 |     await driver.reportProgress(b.session, task, 40);\n> 42 |     expect((await adminView(task)).progress, 'precondition: progress recorded').toBe(40);\n     |                                                                                 ^\n  43 |     expect(await driver.viewTask(a.session, task)).toBeNull();\n  44 |   });\n  45 |\n\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:42:81"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:19.904Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                        "column": 81,
+                        "line": 42
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-79516c4645e957e83e1b",
+              "file": "FR-011.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "TC-091 recording 100% progress does not change an ongoing task to done",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "status": "failed",
+                      "duration": 6528,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:50:27",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                          "column": 27,
+                          "line": 50
+                        },
+                        "snippet": "  48 |     await driver.reportProgress(receiver.session, task, 100);\n  49 |     const view = await adminView(task);\n> 50 |     expect(view.progress).toBe(100);\n     |                           ^\n  51 |     expect(view.status).toBe('ongoing');\n  52 |   });\n  53 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                            "column": 27,
+                            "line": 50
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m100\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  48 |     await driver.reportProgress(receiver.session, task, 100);\n  49 |     const view = await adminView(task);\n> 50 |     expect(view.progress).toBe(100);\n     |                           ^\n  51 |     expect(view.status).toBe('ongoing');\n  52 |   });\n  53 |\n\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:50:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:22.307Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                        "column": 27,
+                        "line": 50
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-630567ec9ee33eb0187c",
+              "file": "FR-011.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "TC-092 recording progress does not change a todo task",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "status": "failed",
+                      "duration": 5128,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:58:27",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                          "column": 27,
+                          "line": 58
+                        },
+                        "snippet": "  56 |     await driver.reportProgress(receiver.session, task, 30);\n  57 |     const view = await adminView(task);\n> 58 |     expect(view.progress).toBe(30);\n     |                           ^\n  59 |     expect(view.status).toBe('todo');\n  60 |   });\n  61 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                            "column": 27,
+                            "line": 58
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m30\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  56 |     await driver.reportProgress(receiver.session, task, 30);\n  57 |     const view = await adminView(task);\n> 58 |     expect(view.progress).toBe(30);\n     |                           ^\n  59 |     expect(view.status).toBe('todo');\n  60 |   });\n  61 |\n\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:58:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:24.061Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                        "column": 27,
+                        "line": 58
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-8cbae693388dea799074",
+              "file": "FR-011.spec.ts",
+              "line": 54,
+              "column": 7
+            },
+            {
+              "title": "TC-093 0% and 100% are accepted",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "status": "failed",
+                      "duration": 7755,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:66:48",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                          "column": 48,
+                          "line": 66
+                        },
+                        "snippet": "  64 |     for (const value of [0, 100]) {\n  65 |       await driver.reportProgress(receiver.session, task, value);\n> 66 |       expect((await adminView(task)).progress).toBe(value);\n     |                                                ^\n  67 |     }\n  68 |   });\n  69 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                            "column": 48,
+                            "line": 66
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  64 |     for (const value of [0, 100]) {\n  65 |       await driver.reportProgress(receiver.session, task, value);\n> 66 |       expect((await adminView(task)).progress).toBe(value);\n     |                                                ^\n  67 |     }\n  68 |   });\n  69 |\n\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:66:48"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:29.842Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                        "column": 48,
+                        "line": 66
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-4f228fcd520da45dd068",
+              "file": "FR-011.spec.ts",
+              "line": 62,
+              "column": 7
+            },
+            {
+              "title": "TC-094 progress outside 0-100 or not a number is rejected",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "status": "failed",
+                      "duration": 7569,
+                      "error": {
+                        "message": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m",
+                        "stack": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:73:81",
+                        "location": {
+                          "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                          "column": 81,
+                          "line": 73
+                        },
+                        "snippet": "  71 |     const { task, receiver } = await taskIn('ongoing');\n  72 |     await driver.reportProgress(receiver.session, task, 40);\n> 73 |     expect((await adminView(task)).progress, 'precondition: progress recorded').toBe(40);\n     |                                                                                 ^\n  74 |     for (const value of [-1, 101, 'abc']) {\n  75 |       await driver.reportProgress(receiver.session, task, value);\n  76 |       expect((await adminView(task)).progress, `value ${value}`).toBe(40);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                            "column": 81,
+                            "line": 73
+                          },
+                          "message": "Error: precondition: progress recorded\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m40\u001b[39m\nReceived: \u001b[31mnull\u001b[39m\n\n  71 |     const { task, receiver } = await taskIn('ongoing');\n  72 |     await driver.reportProgress(receiver.session, task, 40);\n> 73 |     expect((await adminView(task)).progress, 'precondition: progress recorded').toBe(40);\n     |                                                                                 ^\n  74 |     for (const value of [-1, 101, 'abc']) {\n  75 |       await driver.reportProgress(receiver.session, task, value);\n  76 |       expect((await adminView(task)).progress, `value ${value}`).toBe(40);\n\n    at /root/task-manager/verification/automated/tests/FR-011.spec.ts:73:81"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:30.155Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/root/task-manager/verification/automated/tests/FR-011.spec.ts",
+                        "column": 81,
+                        "line": 73
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "d12d66862a98189ce340-c0c9f698f4c471d4ef66",
+              "file": "FR-011.spec.ts",
+              "line": 70,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "NFR-001.spec.ts",
+      "file": "NFR-001.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "NFR-001 Authorization and status rules are enforced server-side",
+          "file": "NFR-001.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-053 every admin-only operation is rejected for a Receiver session",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "status": "passed",
+                      "duration": 8762,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "create user",
+                          "duration": 145
+                        },
+                        {
+                          "title": "create task",
+                          "duration": 137
+                        },
+                        {
+                          "title": "edit and reassign task",
+                          "duration": 291
+                        },
+                        {
+                          "title": "view all tasks",
+                          "duration": 31
+                        }
+                      ],
+                      "startTime": "2026-10-12T16:49:29.212Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c49b0a8c9ccdc4f7960-e8e4a5591a880c6d42e6",
+              "file": "NFR-001.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "TC-054 a crafted request for a forbidden transition is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "status": "passed",
+                      "duration": 7435,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:30.414Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2c49b0a8c9ccdc4f7960-0fb102c60bbc77c66a35",
+              "file": "NFR-001.spec.ts",
+              "line": 32,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "NFR-002.spec.ts",
+      "file": "NFR-002.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "NFR-002 Passwords are stored as secure hashes",
+          "file": "NFR-002.spec.ts",
+          "line": 17,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-055 the stored credential is not the password, an encoding of it or an unsalted hash of it",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "status": "passed",
+                      "duration": 6811,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:38.574Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "efb731d6ae7f7a02e04c-f963599171950c6d2311",
+              "file": "NFR-002.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "TC-056 two users with the same password get different stored hashes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "status": "passed",
+                      "duration": 5414,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:38.746Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "efb731d6ae7f7a02e04c-1997d63ee9e1b9c9b0c6",
+              "file": "NFR-002.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "TC-057 no password or password hash appears in any response",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "status": "passed",
+                      "duration": 8293,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:37.883Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "efb731d6ae7f7a02e04c-dc6c857976ff51045267",
+              "file": "NFR-002.spec.ts",
+              "line": 39,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "NFR-003.spec.ts",
+      "file": "NFR-003.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "NFR-003 CSRF protection, rate limiting and secure sessions",
+          "file": "NFR-003.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-058 a state-changing request with a valid CSRF token is processed",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "status": "passed",
+                      "duration": 7302,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:38.002Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8d0a88d36a58bb8fa29-313ab25a4a5cb11245cd",
+              "file": "NFR-003.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "TC-059 state-changing requests without a valid CSRF token are rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "status": "passed",
+                      "duration": 17308,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "token missing",
+                          "duration": 13720
+                        },
+                        {
+                          "title": "token invalid",
+                          "duration": 2498
+                        }
+                      ],
+                      "startTime": "2026-10-12T16:49:44.199Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8d0a88d36a58bb8fa29-6fa74b86a351bc96eb4b",
+              "file": "NFR-003.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "TC-060 a form auto-submitted from another origin is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "status": "passed",
+                      "duration": 10540,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:45.315Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8d0a88d36a58bb8fa29-d302f275d9d7b736043e",
+              "file": "NFR-003.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "TC-062 a single failed login does not block the user",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "status": "passed",
+                      "duration": 9785,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:45.435Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8d0a88d36a58bb8fa29-8ecc924396670bd9f1c3",
+              "file": "NFR-003.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "TC-063 the session cookie is HttpOnly, SameSite and, over HTTPS, Secure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "note",
+                      "description": "Running over HTTP: the Secure flag is not required (Q-19)."
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "status": "passed",
+                      "duration": 4954,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:46.196Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8d0a88d36a58bb8fa29-2b41bf88140e9bf87717",
+              "file": "NFR-003.spec.ts",
+              "line": 88,
+              "column": 7
+            },
+            {
+              "title": "TC-064 logging in issues a new session ID (session fixation)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "status": "passed",
+                      "duration": 7870,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:51.161Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8d0a88d36a58bb8fa29-62fb62d61437aabb17c6",
+              "file": "NFR-003.spec.ts",
+              "line": 104,
+              "column": 7
+            },
+            {
+              "title": "TC-095 logout without a valid CSRF token is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "main",
+                  "projectName": "main",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "status": "passed",
+                      "duration": 4356,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T16:49:55.234Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c8d0a88d36a58bb8fa29-9e87163629fd75bed785",
+              "file": "NFR-003.spec.ts",
+              "line": 121,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-12T16:45:38.594Z",
+    "duration": 262939.00800000003,
+    "expected": 92,
+    "skipped": 1,
+    "unexpected": 17,
+    "flaky": 0
+  }
+}
