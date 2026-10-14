@@ -176,7 +176,7 @@ Rate limiting and CSRF is not tested here.
 ## VIBE-003
 
 ### Date and time
-29.9.2026 
+29.9.2026
 
 ### Prompt
 
@@ -266,6 +266,48 @@ The generated status workflow differs from the our agreed requirements (by the g
 
 
 ### Follow-up – VIBE-003-F01
+I noticed that I forgot to specify some of the agreed task management requirements in my previous prompt.
+
+Please update the existing Task Manager implementation according to the following requirements.
+
+**Task statuses**
+
+The application should use these five statuses:
+
+- todo
+- ongoing
+- done
+- cancelled
+- failed
+
+Allowed transitions:
+
+- todo → ongoing
+- ongoing → done
+- todo → cancelled
+- todo → failed
+- ongoing → cancelled
+- ongoing → failed
+
+Done, cancelled and failed are terminal states. Tasks in these states cannot transition to another status.
+
+**Deadline handling**
+
+If a task's deadline has passed and the task is not already in a terminal state, its status should automatically change to failed.
+
+**Cancellation**
+
+Both the assigned receiver and an administrator should be able to cancel a task, provided that the task is still active.
+
+**Task reassignment**
+
+When an administrator assigns an existing task to a different receiver, its status should reset to todo.
+
+**Implementation**
+
+Update the existing application while preserving the current architecture, MongoDB database, authentication functionality and visual design.
+
+Ensure that status transitions and authorization rules are enforced server-side.
 
 **Purpose:** Clarify previously omitted task management requirements.
 
