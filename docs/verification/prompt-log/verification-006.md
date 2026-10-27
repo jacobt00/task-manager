@@ -61,4 +61,4 @@ See ../../../verification/automated/results/summary.md and the JSON result files
 - The SDD implementation turned out to be a desktop application with no web server
 
 ## Follow-up
-Real defects will be reported as a code audit log. Waiting for the next version of both implementations
+Real defects will be reported as a code audit log
