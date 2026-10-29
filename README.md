@@ -133,3 +133,9 @@ Both implementations should provide equivalent functionality but may use differe
 The Vibe Coding implementation uses Node.js, Express, MongoDB and Handlebars. The SDD implementation may use a different technology stack.
 
 The shared functional requirements serve as the basis for verification and comparison.
+
+
+
+## Link to original repository
+
+https://github.com/Axeldander/Taskmanager_SDD
